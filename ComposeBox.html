@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Mail Compose</title>
+
+    <link rel="stylesheet" href="ComposeBox.css" />
+  </head>
+  <body>
+    <!-- Dialog Box -->
+    <div id="white-background"></div>
+    <div id="dlgbox">
+      <div id="dlg-header">New Message</div>
+
+      <div id="dlg-body" class="input-field">
+        <input placeholder="To " style="padding-right: 60%" />
+      </div>
+
+      <div id="dlg-body" class="input-field">
+        <input placeholder="Subject " style="padding-right: 60%" />
+      </div>
+
+      <textarea
+        name=""
+        id=""
+        cols="60"
+        rows="20"
+        style="margin-left: 10px"
+      ></textarea>
+      <!-- <div id="dlg-body-2" class="input-field">
+        <input value="Matter " style="padding: 80px; padding-right: 20px; margin-top:15px;"/>
+      </div> -->
+
+      <div id="dlg-footer">
+        <button onclick="dlgOK()">Send</button>
+        <button onclick="dlgCancel()">Attachment</button>
+      </div>
+    </div>
+
+    <p>Click the button below to Compose Email.</p>
+    <button onclick="showDialog()">Compose</button>
+
+    <script>
+      // function dlgCancel(){
+      //     dlgHide();
+      //     document.getElementsByTagName("H1")[0].innerHTML = "You clicked Cancel.";
+      // }
+
+      function dlgOK() {
+        dlgHide();
+        document.getElementsByTagName("H1")[0].innerHTML = "You clicked OK.";
+      }
+
+      function dlgHide() {
+        var whitebg = document.getElementById("white-background");
+        var dlg = document.getElementById("dlgbox");
+        whitebg.style.display = "none";
+        dlg.style.display = "none";
+      }
+
+      function showDialog() {
+        var whitebg = document.getElementById("white-background");
+        var dlg = document.getElementById("dlgbox");
+        whitebg.style.display = "block";
+        dlg.style.display = "block";
+
+        var winWidth = window.innerWidth;
+
+        dlg.style.right = "50px";
+        dlg.style.bottom = "0px";
+      }
+    </script>
+  </body>
+</html>
