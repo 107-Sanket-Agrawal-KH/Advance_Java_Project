@@ -19,17 +19,10 @@
 
     <div></div>
 
-    <!-- <div>
-      <label for="file-upload" class="custom-file-upload">
-    Custom Upload
-</label>
-<input id="file-upload" type="file"/>
-    </div> -->
-
     <!-- Dialog Box -->
     <div id="white-background"></div>
     <div id="dlgbox">
-      <div id="dlg-header">New Message</div>
+      <div id="dlg-header" >New Message <button onclick="dlgCancel()" style="margin-left: 300px;">X</button></div>
 
       <div id="dlg-body" class="input-field">
         <input placeholder="To " style="padding-right: 60%" />
@@ -46,9 +39,6 @@
         rows="20"
         style="margin-left: 10px"
       ></textarea>
-      <!-- <div id="dlg-body-2" class="input-field">
-        <input value="Matter " style="padding: 80px; padding-right: 20px; margin-top:15px;"/>
-      </div> -->
 
       <div id="dlg-footer">
         <button onclick="dlgOK()">Send</button>
@@ -69,10 +59,10 @@
     <button onclick="showDialog()">Compose</button>
 
     <script>
-      // function dlgCancel(){
-      //     dlgHide();
-      //     document.getElementsByTagName("H1")[0].innerHTML = "You clicked Cancel.";
-      // }
+      function dlgCancel(){
+          dlgHide();
+          document.getElementsByTagName("H1")[0].innerHTML = "You clicked Cancel.";
+      }
 
       function dlgOK() {
         dlgHide();
