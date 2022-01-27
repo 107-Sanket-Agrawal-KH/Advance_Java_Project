@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="ComposeBox.css" />
   </head>
   <body>
+    <script src="AttachmentFn.js"></script>
+
+    <div>
+      <div class="element">
+        <input type="file" name="upload_file1" id="upload_file1" />
+      </div>
+    </div>
+
+    <div></div>
+
+    <!-- <div>
+      <label for="file-upload" class="custom-file-upload">
+    Custom Upload
+</label>
+<input id="file-upload" type="file"/>
+    </div> -->
+
     <!-- Dialog Box -->
     <div id="white-background"></div>
     <div id="dlgbox">
@@ -35,7 +52,16 @@
 
       <div id="dlg-footer">
         <button onclick="dlgOK()">Send</button>
-        <button onclick="dlgCancel()">Attachment</button>
+        <button onclick="dlgCancel()">
+          <div class="element">
+            <input
+              type="file"
+              name="upload_file1"
+              id="upload_file1"
+              style="user-select: none"
+            />
+          </div>
+        </button>
       </div>
     </div>
 
